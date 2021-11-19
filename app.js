@@ -35,21 +35,21 @@ async function recreateDB(){
  
   let instance1 = new 
 Dog({breed:"ghost",  colour:'large', 
-price:25.4}); 
+price:27.4}); 
   instance1.save( function(err,doc) { 
       if(err) return console.error(err); 
       console.log("First object saved") 
   });
   let instance2 = new 
   Dog({breed:"hoodie",  colour:'Medium', 
-  price:11.4}); 
+  price:10.4}); 
     instance2.save( function(err,doc) { 
         if(err) return console.error(err); 
         console.log("Second object saved") 
     }); 
     let instance3 = new 
 Dog({breed:"Jacket",  colour:'large', 
-price:250.4}); 
+price:230.4}); 
   instance3.save( function(err,doc) { 
       if(err) return console.error(err); 
       console.log("Third object saved") 
