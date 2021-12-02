@@ -16,7 +16,7 @@ exports.dog_list = async function(req, res) {
 exports.dog_view_all_Page = async function(req, res) { 
     try{ 
         let dogs = await Dog.find(); 
-        res.render('dog', { title: 'Mango Search Results', results: dogs }); 
+        res.render('dog', { title: 'Dog Search Results', results: dogs }); 
     } 
     catch(err){ 
         res.status(500); 
@@ -56,7 +56,7 @@ ${JSON.stringify(req.body)}`)
         let toUpdate = await Dog.findById( req.params.id) 
         // Do updates of properties 
         if(req.body.breed)  
-               toUpdate.breed = req.body.breed; 
+                toUpdate.breed = req.body.breed; 
         if(req.body.price) toUpdate.price = req.body.price; 
         if(req.body.size) toUpdate.colour = req.body.colour; 
         let result = await toUpdate.save(); 
